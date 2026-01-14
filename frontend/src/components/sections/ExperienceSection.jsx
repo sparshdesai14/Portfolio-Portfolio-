@@ -101,6 +101,22 @@ export const ExperienceSection = () => {
                           <div className="flex items-center gap-2">
                             <Building2 className="w-4 h-4 text-primary" />
                             {exp.company}
+                            {exp.companyWebsites && (
+                              <span className="flex items-center gap-1 ml-1">
+                                {exp.companyWebsites.map((site, idx) => (
+                                  <a 
+                                    key={idx}
+                                    href={site.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-primary hover:underline text-xs"
+                                    title={site.name}
+                                  >
+                                    <ExternalLink className="w-3 h-3 inline" />
+                                  </a>
+                                ))}
+                              </span>
+                            )}
                           </div>
                           <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4 text-primary" />
@@ -111,6 +127,24 @@ export const ExperienceSection = () => {
                             {exp.duration} · {exp.period}
                           </div>
                         </div>
+
+                        {/* Company Website Links for Advait */}
+                        {exp.companyWebsites && (
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {exp.companyWebsites.map((site, idx) => (
+                              <a 
+                                key={idx}
+                                href={site.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs hover:bg-primary/20 transition-colors"
+                              >
+                                <ExternalLink className="w-3 h-3" />
+                                {site.name}
+                              </a>
+                            ))}
+                          </div>
+                        )}
 
                         {/* Description */}
                         <p className="text-muted-foreground mb-6 leading-relaxed">
