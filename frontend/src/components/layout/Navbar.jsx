@@ -126,16 +126,16 @@ export const Navbar = () => {
             isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 space-y-2 border-t border-border">
+          <div className="py-4 space-y-1 border-t border-primary/30 bg-black/95 backdrop-blur-xl rounded-b-xl mx-2 mb-2 shadow-2xl">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                className={`block mx-2 px-4 py-3 rounded-lg text-base font-semibold transition-all ${
                   activeSection === link.href.replace('#', '')
-                    ? 'text-primary bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    ? 'text-primary bg-primary/20 border-l-4 border-primary'
+                    : 'text-orange-400 hover:text-primary hover:bg-primary/10'
                 }`}
               >
                 {link.name}
@@ -144,10 +144,10 @@ export const Navbar = () => {
             <a
               href="#hobbies"
               onClick={(e) => { e.preventDefault(); handleNavClick('#hobbies'); }}
-              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+              className={`block mx-2 px-4 py-3 rounded-lg text-base font-semibold transition-all ${
                 activeSection === 'hobbies'
-                  ? 'text-primary bg-primary/10'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  ? 'text-primary bg-primary/20 border-l-4 border-primary'
+                  : 'text-orange-400 hover:text-primary hover:bg-primary/10'
               }`}
             >
               Hobbies
