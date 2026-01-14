@@ -31,28 +31,40 @@ With a strong understanding of financial analytics and business operations, and 
 };
 
 export const aboutMe = {
-  summary: `Currently, I work in parallel across multiple domains - handling IT Infrastructure management, enterprise data platforms, freelancing on diverse projects, and continuously expanding my expertise in Generative AI and Virtual AI technologies. My experience spans client management and issue resolution across global time zones, having worked all shifts at Infosys supporting clients worldwide.
+  summary: `Currently, I work in parallel across multiple domains - handling IT Infrastructure management, enterprise data platforms, Data Analytics, freelancing on diverse projects, and continuously expanding my expertise in Generative AI, Virtual AI, Big Data, Hadoop, Apache Spark, TensorFlow, PyTorch, NLP, and Time Series Analysis. I'm actively working on these technologies with a target to be fully trained and proficient by the end of the year.
 
-I bring a unique blend of technical expertise and business acumen, built through rigorous training at Infosys Mysore Campus and competitive exam preparation for IIT and GATE, which sharpened my analytical and logical reasoning abilities.`,
+I'm currently pursuing a Diploma in Executive Leadership & Strategic Innovation Program from AMA (Ahmedabad Management Association) [August 2025 - February 2026] in parallel with my work.
+
+My experience spans client management and issue resolution across global time zones, having worked all shifts at Infosys (Pune) supporting clients worldwide. I had offer letters from TCS and Accenture at the time of fresher entry but chose Infosys. Currently, I'm also helping the HR team from data and IT perspectives.
+
+I bring a unique blend of technical expertise and business acumen, built through rigorous training at Infosys Mysore Campus and competitive exam preparation for IIT and GATE, which sharpened my analytical and logical reasoning abilities.
+
+I have strong Business Analyst knowledge including AOP (Annual Operating Plan), Cash Flow Analysis, LOA, LC & BG, DPR, Balance Sheet Analysis, Stock Analysis, and Fund Management. My aim is to become a strategic analyst proficient in both data science and business/finance domains.
+
+I also have experience in digital selling and digital marketing through Instagram and e-commerce platforms like Flipkart, Myntra, and Amazon. During COVID, I took hobby classes teaching Chemistry, Physics, and Web Development.`,
   highlights: [
     "Expert in transforming complex datasets into actionable business insights",
     "Led enterprise-wide BI and data platform initiatives",
-    "Strong foundation in AI, ML, Deep Learning, GenAI, and NLP",
+    "Strong foundation in AI, ML, Deep Learning, GenAI, NLP, and Time Series Analysis",
+    "Currently learning: Big Data, Hadoop, Apache Spark, TensorFlow, PyTorch",
+    "Pursuing Diploma in Executive Leadership & Strategic Innovation (AMA)",
+    "Business Analyst skills: AOP, Cash Flow, Balance Sheet, Stock & Fund Analysis",
     "Full-stack development capabilities with React.js",
     "Microsoft 365 & Power Platform specialist",
     "E-commerce expertise with Shopify, Magento & WordPress",
-    "SEO & Digital Marketing specialist",
-    "Freelancing with multiple successful projects",
-    "Currently working on GenAI, Virtual AI & GCP technologies",
-    "IT Infrastructure management and vendor coordination"
+    "SEO & Digital Marketing (Instagram, Flipkart, Myntra, Amazon)",
+    "IT Infrastructure management and HR support",
+    "Had offer letters from TCS and Accenture"
   ],
   additionalInfo: [
-    "Trained at prestigious Infosys Mysore Campus",
+    "Trained at prestigious Infosys Mysore Campus (Pune location)",
     "Competitive exam experience (IIT, GATE) - Strong analytical skills",
     "Worked all shifts supporting global clients across time zones",
     "Java certification from KIIT, participated in Java coding competitions",
-    "Certified in Sketch and Art (MAD IN SKETCH AND ART)",
-    "Led team during Infosys training program"
+    "Certified in Sketch and Art",
+    "Led team during Infosys training program",
+    "Taught Chemistry, Physics & Web Development during COVID (hobby)",
+    "Experience in digital selling on e-commerce platforms"
   ]
 };
 
@@ -155,8 +167,8 @@ export const internships = [
     location: "Ahmedabad, India",
     type: "Internship",
     mode: "On-site",
-    duration: "2019",
-    period: "3 months",
+    duration: "Jan 2021 - Feb 2021",
+    period: "2 months",
     description: `Worked on e-commerce platform development and digital marketing initiatives. Gained hands-on experience with Shopify, Magento, and WordPress platforms along with SEO optimization.`,
     highlights: [
       "E-commerce website development on Shopify and Magento",
@@ -227,7 +239,7 @@ export const certifications = [
   },
   {
     id: 4,
-    name: "MAD IN SKETCH AND ART Certification",
+    name: "Sketch and Art Certification",
     issuer: "Art Institute",
     date: "2019",
     icon: "palette"
