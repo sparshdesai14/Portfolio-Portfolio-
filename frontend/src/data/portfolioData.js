@@ -341,7 +341,7 @@ export const projects = [
     highlights: ["Payment prediction", "React.js frontend", "Full-stack solution"]
   },
   {
-    id: 7,
+    id: 6,
     title: "GCP Data Pipeline & Visualization",
     description: "Implemented data extraction and visualization workflows on Google Cloud Platform using Virtual AI.",
     tech: ["GCP", "Virtual AI", "Python", "Data Visualization", "BigQuery"],
@@ -349,7 +349,7 @@ export const projects = [
     highlights: ["Cloud-based workflows", "Intuitive visualizations"]
   },
   {
-    id: 8,
+    id: 7,
     title: "E-commerce Platform Development",
     description: "Designed and managed multiple e-commerce websites using Shopify, Magento, and WordPress platforms.",
     tech: ["Shopify", "Magento", "WordPress", "SEO", "Digital Marketing"],
