@@ -10,10 +10,6 @@ import {
   CheckCircle2, ExternalLink, MessageCircle
 } from 'lucide-react';
 import { toast } from 'sonner';
-import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +19,6 @@ export const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,30 +29,45 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Submit to backend API
-      const response = await axios.post(`${API}/contact`, formData);
-      
-      if (response.data.success) {
-        setIsSubmitted(true);
-        toast.success('Message sent successfully!', {
-          description: "I'll get back to you as soon as possible."
-        });
+    // Format message for WhatsApp
+    const whatsappMessage = `
+*New Contact Form Submission*
+━━━━━━━━━━━━━━━━━━━━━
 
-        // Reset form after delay
-        setTimeout(() => {
-          setFormData({ name: '', email: '', subject: '', message: '' });
-          setIsSubmitted(false);
-        }, 3000);
-      }
-    } catch (error) {
-      console.error('Error submitting contact form:', error);
-      toast.error('Failed to send message', {
-        description: 'Please try again or contact me directly via email.'
-      });
-    } finally {
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}
+
+━━━━━━━━━━━━━━━━━━━━━
+_Sent from Portfolio Website_
+    `.trim();
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp number (without +)
+    const whatsappNumber = '919409460879';
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Show success toast
+    toast.success('Redirecting to WhatsApp!', {
+      description: 'Your message is ready to send.'
+    });
+
+    // Small delay for toast to show
+    setTimeout(() => {
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
-    }
+    }, 500);
   };
 
   const contactInfo = [
@@ -203,111 +213,108 @@ export const ContactSection = () => {
           <div className="lg:col-span-3">
             <Card className="bg-card border-border">
               <CardContent className="p-6 lg:p-8">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-6">
-                  Send Me a Message
-                </h3>
-                
-                {isSubmitted ? (
-                  <div className="text-center py-12">
-                    <div className="w-16 h-16 rounded-full bg-success/20 flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 className="w-8 h-8 text-success" />
-                    </div>
-                    <h4 className="text-xl font-heading font-semibold text-foreground mb-2">
-                      Message Sent!
-                    </h4>
-                    <p className="text-muted-foreground">
-                      Thank you for reaching out. I'll get back to you soon!
-                    </p>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-green-500" />
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name" className="text-foreground">
-                          Your Name
-                        </Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="John Doe"
-                          required
-                          minLength={2}
-                          className="bg-background border-border focus:border-primary"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-foreground">
-                          Email Address
-                        </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="john@example.com"
-                          required
-                          className="bg-background border-border focus:border-primary"
-                        />
-                      </div>
-                    </div>
-                    
+                  <div>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      Send Message via WhatsApp
+                    </h3>
+                    <p className="text-sm text-muted-foreground">Fill the form and it will open WhatsApp</p>
+                  </div>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="subject" className="text-foreground">
-                        Subject
+                      <Label htmlFor="name" className="text-foreground">
+                        Your Name
                       </Label>
                       <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
+                        id="name"
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
-                        placeholder="Project Discussion / Opportunity / Other"
+                        placeholder="John Doe"
                         required
-                        minLength={3}
+                        minLength={2}
                         className="bg-background border-border focus:border-primary"
                       />
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-foreground">
-                        Your Message
+                      <Label htmlFor="email" className="text-foreground">
+                        Email Address
                       </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
                         onChange={handleChange}
-                        placeholder="Tell me about your project or how I can help..."
-                        rows={5}
+                        placeholder="john@example.com"
                         required
-                        minLength={10}
-                        className="bg-background border-border focus:border-primary resize-none"
+                        className="bg-background border-border focus:border-primary"
                       />
                     </div>
-                    
-                    <Button 
-                      type="submit" 
-                      variant="premium" 
-                      size="lg" 
-                      className="w-full gap-2"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="subject" className="text-foreground">
+                      Subject
+                    </Label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="Project Discussion / Opportunity / Other"
+                      required
+                      minLength={3}
+                      className="bg-background border-border focus:border-primary"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-foreground">
+                      Your Message
+                    </Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell me about your project or how I can help..."
+                      rows={5}
+                      required
+                      minLength={10}
+                      className="bg-background border-border focus:border-primary resize-none"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full gap-2 bg-green-600 hover:bg-green-700 text-white"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Opening WhatsApp...
+                      </>
+                    ) : (
+                      <>
+                        <MessageCircle className="w-5 h-5" />
+                        Send via WhatsApp
+                      </>
+                    )}
+                  </Button>
+                  
+                  <p className="text-xs text-center text-muted-foreground">
+                    Clicking submit will open WhatsApp with your message pre-filled
+                  </p>
+                </form>
               </CardContent>
             </Card>
           </div>
