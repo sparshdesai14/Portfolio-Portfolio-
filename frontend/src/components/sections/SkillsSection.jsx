@@ -135,12 +135,15 @@ export const SkillsSection = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-2 max-w-5xl mx-auto">
             {[
+              // Business Analytics & Finance
+              'AOP Analysis', 'Cash Flow Analysis', 'Balance Sheet Analysis', 'Stock Analysis',
+              'Fund Management', 'LC & BG', 'DPR Analysis', 'Financial Analytics',
               // Web Dev
               'React.js', 'Redux', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap',
               // E-commerce
               'Shopify', 'Magento', 'WordPress', 'E-commerce Design',
               // SEO & Marketing
-              'SEO', 'Digital Marketing', 'SEO Management', 'Google Analytics',
+              'SEO', 'Digital Marketing', 'Instagram Marketing', 'Flipkart', 'Amazon', 'Myntra',
               // Cloud & Enterprise
               'GCP', 'Azure', 'Microsoft 365', 'SharePoint', 'Power Apps', 'Power Automate',
               // Database
@@ -151,7 +154,7 @@ export const SkillsSection = () => {
               'VS Code', 'GitHub', 'Jupyter', 'Agile', 'DevOps', 'Java',
               // Professional
               'Client Management', 'Vendor Management', 'IT Infrastructure',
-              'Website Designing', 'Website Management', 'Team Leadership'
+              'Website Designing', 'Website Management', 'Team Leadership', 'HR Support'
             ].map((skill, index) => (
               <span 
                 key={index}
