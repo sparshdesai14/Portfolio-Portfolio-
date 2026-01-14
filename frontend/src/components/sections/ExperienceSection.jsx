@@ -146,19 +146,22 @@ export const ExperienceSection = () => {
                           </div>
                         )}
 
-                        {/* Description */}
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {/* Description - Full Paragraph */}
+                        <div className="text-muted-foreground mb-6 leading-relaxed whitespace-pre-line text-sm">
                           {exp.description}
-                        </p>
+                        </div>
 
-                        {/* Highlights */}
-                        <div className="space-y-2 mb-6">
-                          {exp.highlights.map((highlight, idx) => (
-                            <div key={idx} className="flex items-start gap-2">
-                              <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{highlight}</span>
-                            </div>
-                          ))}
+                        {/* Key Highlights - Bullet Points */}
+                        <div className="mb-6">
+                          <h4 className="text-sm font-semibold text-foreground mb-3">Key Responsibilities & Achievements:</h4>
+                          <div className="grid sm:grid-cols-2 gap-2">
+                            {exp.highlights.map((highlight, idx) => (
+                              <div key={idx} className="flex items-start gap-2">
+                                <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-muted-foreground">{highlight}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
 
                         {/* Skills */}
