@@ -33,28 +33,18 @@ With a strong understanding of financial analytics and business operations, and 
 export const aboutMe = {
   summary: `Currently, I work in parallel across multiple domains - handling IT Infrastructure management, enterprise data platforms, Data Analytics, freelancing on diverse projects, and continuously expanding my expertise in Generative AI, Virtual AI, Big Data, Hadoop, Apache Spark, TensorFlow, PyTorch, NLP, and Time Series Analysis. I'm actively working on these technologies with a target to be fully trained and proficient by the end of the year.
 
-I'm currently pursuing a Diploma in Executive Leadership & Strategic Innovation Program from AMA (Ahmedabad Management Association) [August 2025 - February 2026] in parallel with my work.
-
-My experience spans client management and issue resolution across global time zones, having worked all shifts at Infosys (Pune) supporting clients worldwide. I had offer letters from TCS and Accenture at the time of fresher entry but chose Infosys. Currently, I'm also helping the HR team from data and IT perspectives.
-
-I bring a unique blend of technical expertise and business acumen, built through rigorous training at Infosys Mysore Campus and competitive exam preparation for IIT and GATE, which sharpened my analytical and logical reasoning abilities.
-
-I have strong Business Analyst knowledge including AOP (Annual Operating Plan), Cash Flow Analysis, LOA, LC & BG, DPR, Balance Sheet Analysis, Stock Analysis, and Fund Management. My aim is to become a strategic analyst proficient in both data science and business/finance domains.
-
-I also have experience in digital selling and digital marketing through Instagram and e-commerce platforms like Flipkart, Myntra, and Amazon. During COVID, I took hobby classes teaching Chemistry, Physics, and Web Development.`,
+I'm currently pursuing a Diploma in Executive Leadership & Strategic Innovation Program from AMA (Ahmedabad Management Association) [August 2025 - February 2026] in parallel with my work.`,
   highlights: [
     "Expert in transforming complex datasets into actionable business insights",
     "Led enterprise-wide BI and data platform initiatives",
     "Strong foundation in AI, ML, Deep Learning, GenAI, NLP, and Time Series Analysis",
     "Currently learning: Big Data, Hadoop, Apache Spark, TensorFlow, PyTorch",
     "Pursuing Diploma in Executive Leadership & Strategic Innovation (AMA)",
-    "Business Analyst skills: AOP, Cash Flow, Balance Sheet, Stock & Fund Analysis",
     "Full-stack development capabilities with React.js",
     "Microsoft 365 & Power Platform specialist",
     "E-commerce expertise with Shopify, Magento & WordPress",
-    "SEO & Digital Marketing (Instagram, Flipkart, Myntra, Amazon)",
-    "IT Infrastructure management and HR support",
-    "Had offer letters from TCS and Accenture"
+    "SEO & Digital Marketing specialist",
+    "IT Infrastructure management"
   ],
   additionalInfo: [
     "Trained at prestigious Infosys Mysore Campus (Pune location)",
@@ -62,9 +52,7 @@ I also have experience in digital selling and digital marketing through Instagra
     "Worked all shifts supporting global clients across time zones",
     "Java certification from KIIT, participated in Java coding competitions",
     "Certified in Sketch and Art",
-    "Led team during Infosys training program",
-    "Taught Chemistry, Physics & Web Development during COVID (hobby)",
-    "Experience in digital selling on e-commerce platforms"
+    "Led team during Infosys training program"
   ]
 };
 
@@ -352,16 +340,37 @@ export const skills = {
       { name: "Natural Language Processing (NLP)", level: 85 },
       { name: "Generative AI (GenAI)", level: 85 },
       { name: "TensorFlow", level: 85 },
+      { name: "PyTorch", level: 80 },
       { name: "Scikit-Learn", level: 90 },
       { name: "Python", level: 95 },
       { name: "Supervised Learning", level: 92 },
       { name: "Unsupervised Learning", level: 88 },
       { name: "Predictive Modeling", level: 90 },
       { name: "Statistical Analysis", level: 88 },
+      { name: "Time Series Analysis", level: 82 },
       { name: "Virtual AI", level: 82 },
       { name: "Big Data Analytics", level: 85 },
       { name: "Hadoop", level: 75 },
+      { name: "Apache Spark", level: 75 },
       { name: "Data Mining", level: 88 }
+    ]
+  },
+  businessAnalytics: {
+    title: "Business Analytics & Finance",
+    icon: "trending",
+    skills: [
+      { name: "AOP (Annual Operating Plan)", level: 90 },
+      { name: "Cash Flow Analysis", level: 88 },
+      { name: "Balance Sheet Analysis", level: 85 },
+      { name: "Stock Analysis", level: 82 },
+      { name: "Fund Management", level: 80 },
+      { name: "LOA Analysis", level: 88 },
+      { name: "LC & BG Analysis", level: 85 },
+      { name: "DPR Analysis", level: 85 },
+      { name: "Financial Analytics", level: 88 },
+      { name: "Business Strategy", level: 85 },
+      { name: "Strategic Planning", level: 82 },
+      { name: "Executive Leadership", level: 80 }
     ]
   },
   businessIntelligence: {
@@ -441,7 +450,11 @@ export const skills = {
       { name: "Digital Marketing", level: 85 },
       { name: "SEO Management", level: 85 },
       { name: "Content Management", level: 88 },
-      { name: "Google Analytics", level: 82 }
+      { name: "Google Analytics", level: 82 },
+      { name: "Instagram Marketing", level: 80 },
+      { name: "Flipkart Selling", level: 78 },
+      { name: "Amazon Selling", level: 78 },
+      { name: "Myntra", level: 75 }
     ]
   },
   tools: {
@@ -474,7 +487,8 @@ export const skills = {
       { name: "Communication", level: 92 },
       { name: "Teamwork", level: 95 },
       { name: "Presentation Skills", level: 90 },
-      { name: "Global Client Support", level: 88 }
+      { name: "Global Client Support", level: 88 },
+      { name: "HR Support", level: 82 }
     ]
   }
 };
