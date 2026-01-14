@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { personalInfo } from '@/data/portfolioData';
-import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Target } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Target, Briefcase, GraduationCap, Award, Sparkles } from 'lucide-react';
 
 export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,6 +26,7 @@ export const HeroSection = () => {
       {/* Decorative Gradient Orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
@@ -52,7 +53,7 @@ export const HeroSection = () => {
                 {personalInfo.title}
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                {personalInfo.tagline}. Specializing in AI, Machine Learning, GenAI, and Business Intelligence to drive data-driven decision making.
+                {personalInfo.tagline}. Specializing in AI, Machine Learning, GenAI, Big Data, and Business Intelligence to drive data-driven decision making.
               </p>
             </div>
 
@@ -112,42 +113,70 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image (Square) with Experience */}
+          {/* Right Content - Stats & Highlights Cards (No Profile Picture) */}
           <div 
-            className={`relative flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
+            className={`relative transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="relative">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-3xl opacity-30 scale-110" />
-              
-              {/* Image Container - SQUARE */}
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-glow">
-                <img
-                  src={personalInfo.profileImage}
-                  alt={personalInfo.name}
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Overlay with info */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-4">
-                  <p className="text-primary font-heading font-bold text-lg">
-                    4+ Years Experience
-                  </p>
-                  <p className="text-foreground/80 text-sm mt-1">
-                    Data Science | BI | AI/ML | Web Dev
-                  </p>
+            <div className="grid grid-cols-2 gap-4">
+              {/* Experience Card */}
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Briefcase className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-3xl font-heading font-bold text-gradient mb-1">4+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
+              </div>
+
+              {/* Projects Card */}
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-3xl font-heading font-bold text-gradient mb-1">50+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              </div>
+
+              {/* Education Card */}
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <GraduationCap className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-3xl font-heading font-bold text-gradient mb-1">8.76</div>
+                <div className="text-sm text-muted-foreground">CGPA - KIIT</div>
+              </div>
+
+              {/* Currently Learning Card */}
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Sparkles className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-lg font-heading font-bold text-primary mb-1">Learning</div>
+                <div className="text-xs text-muted-foreground">GenAI, Spark, PyTorch</div>
+              </div>
+
+              {/* Goal Card - Full Width */}
+              <div className="col-span-2 p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/30">
+                <div className="flex items-start gap-3">
+                  <Target className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-primary font-semibold mb-1">Career Goal</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      To become a strategic analyst proficient in both Data Science and Business/Finance, driving digital transformation and technology-led growth.
+                    </p>
+                  </div>
                 </div>
               </div>
-              
-              {/* Goal Badge */}
-              <div className="absolute -bottom-4 -right-4 px-4 py-3 bg-card border border-primary/30 rounded-xl shadow-lg max-w-xs">
-                <div className="flex items-start gap-2">
-                  <Target className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    <span className="text-primary font-semibold">Goal:</span> Driving digital transformation & technology-led growth
-                  </p>
+
+              {/* Currently Pursuing Card - Full Width */}
+              <div className="col-span-2 p-4 rounded-xl bg-card border border-border">
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="w-5 h-5 text-primary flex-shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium text-foreground">Currently Pursuing</p>
+                    <p className="text-xs text-muted-foreground">Diploma in Executive Leadership & Strategic Innovation - AMA (Aug 2025 - Feb 2026)</p>
+                  </div>
                 </div>
               </div>
             </div>
