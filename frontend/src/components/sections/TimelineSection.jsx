@@ -11,10 +11,10 @@ const timelineData = [
   },
   {
     year: "2019",
-    title: "Elsner Internship",
-    description: "Web Development & Digital Marketing",
-    icon: Rocket,
-    type: "internship"
+    title: "NLP Sentiment Analysis",
+    description: "Social Media Sentiments - Galwan Crisis",
+    icon: Award,
+    type: "project"
   },
   {
     year: "2020",
@@ -22,6 +22,20 @@ const timelineData = [
     description: "FinTech ML Project Development",
     icon: Rocket,
     type: "internship"
+  },
+  {
+    year: "2020",
+    title: "COVID Analysis Project",
+    description: "Data Analysis & Visualization",
+    icon: Award,
+    type: "project"
+  },
+  {
+    year: "2020",
+    title: "COVID Dashboard",
+    description: "Final Year Project - Analysis Dashboard",
+    icon: Award,
+    type: "project"
   },
   {
     year: "2021",
@@ -32,10 +46,10 @@ const timelineData = [
   },
   {
     year: "2021",
-    title: "TCS & Accenture Offers",
-    description: "Received offer letters at fresher entry",
-    icon: Award,
-    type: "achievement"
+    title: "Elsner Internship",
+    description: "Web Development & Digital Marketing",
+    icon: Rocket,
+    type: "internship"
   },
   {
     year: "2022",
@@ -53,17 +67,24 @@ const timelineData = [
   },
   {
     year: "2023",
+    title: "Left Infosys",
+    description: "Completed 1 year 10 months",
+    icon: Briefcase,
+    type: "work"
+  },
+  {
+    year: "2024",
     title: "Unmessenger Internship",
     description: "Data Science & ML on GCP",
     icon: Rocket,
     type: "internship"
   },
   {
-    year: "2023",
-    title: "Left Infosys",
-    description: "Completed 1 year 10 months",
-    icon: Briefcase,
-    type: "work"
+    year: "2024",
+    title: "DataIsGood Certifications",
+    description: "Advanced ML & Data Analytics",
+    icon: Award,
+    type: "achievement"
   },
   {
     year: "2025",

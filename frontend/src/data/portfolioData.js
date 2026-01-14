@@ -135,8 +135,8 @@ export const internships = [
     location: "Delhi, India",
     type: "Internship",
     mode: "Remote",
-    duration: "Dec 2023 - Jun 2024",
-    period: "7 months",
+    duration: "Jan 2024 - Jun 2024",
+    period: "6 months",
     description: `Led multiple Data Science projects encompassing Data Analysis, Extraction, Cleaning, and Visualization. Successfully developed and deployed Machine Learning models with optimized performance on Google Cloud Platform.`,
     highlights: [
       "Led end-to-end Data Science projects with high data quality standards",
@@ -318,14 +318,30 @@ export const projects = [
   },
   {
     id: 3,
-    title: "NLP Sentiment Analysis Project",
-    description: "Built an NLP project to predict sentiment of statements using machine learning models integrated with web interfaces.",
-    tech: ["Python", "NLP", "Machine Learning", "Jupyter"],
+    title: "Sentiment Analysis During Galwan Crisis",
+    description: "Built an NLP project analyzing social media sentiments during the Galwan Crisis (2019), using machine learning models integrated with web interfaces for real-time sentiment tracking.",
+    tech: ["Python", "NLP", "Machine Learning", "Jupyter", "Social Media API"],
     category: "Data Science",
-    highlights: ["Sentiment prediction", "Web interface integration"]
+    highlights: ["Social media sentiment analysis", "Galwan Crisis sentiment tracking", "Web interface integration"]
   },
   {
     id: 4,
+    title: "COVID Analysis Project",
+    description: "Comprehensive data analysis and visualization project on COVID-19 pandemic data, providing insights on spread patterns, recovery rates, and regional impacts.",
+    tech: ["Python", "Pandas", "Data Visualization", "Jupyter", "Matplotlib"],
+    category: "Data Science",
+    highlights: ["Pandemic data analysis", "Statistical insights", "Visual dashboards"]
+  },
+  {
+    id: 5,
+    title: "COVID Analysis Dashboard",
+    description: "Final Year Project - Built an interactive COVID-19 analysis dashboard providing real-time data visualization, trend analysis, and predictive insights for pandemic tracking.",
+    tech: ["Python", "Power BI", "Data Visualization", "Machine Learning", "SQL"],
+    category: "Data Science",
+    highlights: ["Final Year Project", "Real-time dashboard", "Predictive analytics", "Interactive visualizations"]
+  },
+  {
+    id: 6,
     title: "FinTech Invoice Prediction System",
     description: "Developed ML-based system to predict invoice payment status (full/partial) for HighRadius.",
     tech: ["Python", "React.js", "Redux", "SQL Server", "Machine Learning"],
@@ -333,7 +349,7 @@ export const projects = [
     highlights: ["Payment prediction", "React.js frontend", "Full-stack solution"]
   },
   {
-    id: 5,
+    id: 7,
     title: "GCP Data Pipeline & Visualization",
     description: "Implemented data extraction and visualization workflows on Google Cloud Platform using Virtual AI.",
     tech: ["GCP", "Virtual AI", "Python", "Data Visualization", "BigQuery"],
@@ -341,7 +357,7 @@ export const projects = [
     highlights: ["Cloud-based workflows", "Intuitive visualizations"]
   },
   {
-    id: 6,
+    id: 8,
     title: "E-commerce Platform Development",
     description: "Designed and managed multiple e-commerce websites using Shopify, Magento, and WordPress platforms.",
     tech: ["Shopify", "Magento", "WordPress", "SEO", "Digital Marketing"],
