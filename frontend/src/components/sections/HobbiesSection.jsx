@@ -14,7 +14,8 @@ const iconMap = {
   'rss': Rss,
   'palette': Palette,
   'map-pin': MapPin,
-  'headphones': Headphones
+  'headphones': Headphones,
+  'book': FileText
 };
 
 export const HobbiesSection = () => {
