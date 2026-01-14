@@ -256,6 +256,33 @@
         animation: glow 2s ease-in-out infinite alternate;
     }
     
+    .animate-bounce-slow {
+        animation: bounce-slow 3s ease-in-out infinite;
+    }
+    
+    .animate-shimmer {
+        animation: shimmer 2s linear infinite;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            hsla(25, 95%, 53%, 0.1),
+            transparent
+        );
+        background-size: 200% 100%;
+    }
+    
+    .animate-scale-in {
+        animation: scale-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-slide-up {
+        animation: slide-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+    }
+    
     @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
@@ -266,11 +293,87 @@
         to { box-shadow: 0 0 40px hsla(25, 95%, 53%, 0.6); }
     }
     
+    @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    
+    @keyframes scale-in {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    
+    @keyframes slide-up {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
     .bg-grid-pattern {
         background-image: 
             linear-gradient(hsla(0, 0%, 20%, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, hsla(0, 0%, 20%, 0.1) 1px, transparent 1px);
         background-size: 60px 60px;
+    }
+    
+    /* Enhanced Hover Effects */
+    .hover-glow:hover {
+        box-shadow: 0 0 30px hsla(25, 95%, 53%, 0.4);
+    }
+    
+    .hover-scale:hover {
+        transform: scale(1.02);
+    }
+    
+    .hover-lift-sm:hover {
+        transform: translateY(-4px);
+    }
+    
+    .card-hover {
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 20px 40px -20px hsla(25, 95%, 53%, 0.3);
+        border-color: hsla(25, 95%, 53%, 0.5);
+    }
+    
+    .icon-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .icon-hover:hover {
+        transform: rotate(10deg) scale(1.1);
+        color: hsl(25, 95%, 53%);
+    }
+    
+    .link-underline {
+        position: relative;
+    }
+    
+    .link-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: width 0.3s ease;
+    }
+    
+    .link-underline:hover::after {
+        width: 100%;
     }
 }
 
