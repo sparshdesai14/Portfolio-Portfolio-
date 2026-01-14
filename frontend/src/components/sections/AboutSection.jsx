@@ -175,7 +175,7 @@ export const AboutSection = () => {
             {/* Quote */}
             <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
               <blockquote className="text-lg text-foreground italic">
-                "Data is the new oil, but like oil, it's valuable only when refined into insights that drive action."
+                &ldquo;Data is the new oil, but like oil, it&apos;s valuable only when refined into insights that drive action.&rdquo;
               </blockquote>
               <p className="mt-4 text-primary font-medium">— My Data Philosophy</p>
             </div>

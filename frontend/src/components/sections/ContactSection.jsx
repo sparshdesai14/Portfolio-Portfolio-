@@ -124,11 +124,11 @@ _Sent from Portfolio Website_
             Get In Touch
           </span>
           <h2 className="section-title text-foreground mb-4">
-            Let's{' '}
+            Let&apos;s{' '}
             <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you!
+            Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you!
           </p>
         </div>
 

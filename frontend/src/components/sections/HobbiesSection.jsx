@@ -39,7 +39,7 @@ export const HobbiesSection = () => {
             <span className="text-gradient">Hobbies</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-            When I'm not analyzing data or building dashboards, here's what keeps me inspired
+            When I&apos;m not analyzing data or building dashboards, here&apos;s what keeps me inspired
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export const HobbiesSection = () => {
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Poetry and writing have always been my way of expressing emotions and connecting with others. 
-                  I write Shayari in Hindi and Urdu, capturing moments, feelings, and life's beautiful complexities 
+                  I write Shayari in Hindi and Urdu, capturing moments, feelings, and life&apos;s beautiful complexities 
                   through words. I also write articles on technology, life lessons, and personal growth.
                 </p>
                 <a 
@@ -119,7 +119,7 @@ export const HobbiesSection = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl" />
                 <div className="relative p-6 lg:p-8 rounded-xl border border-primary/20 bg-card/50">
-                  <div className="text-5xl text-primary/20 font-serif absolute top-4 left-4">"</div>
+                  <div className="text-5xl text-primary/20 font-serif absolute top-4 left-4">&ldquo;</div>
                   <blockquote className="text-lg lg:text-xl text-foreground italic leading-relaxed pl-8 pt-4">
                     जिंदगी के सफर में कुछ लम्हे ऐसे होते हैं,
                     <br />

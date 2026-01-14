@@ -264,7 +264,7 @@ export const TimelineSection = () => {
       </div>
 
       {/* Custom scrollbar hide style */}
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }

@@ -50,7 +50,7 @@ export const HeroSection = () => {
             {/* Main Heading */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-foreground leading-tight">
-                Hi, I'm{' '}
+                Hi, I&apos;m{' '}
                 <span className="text-gradient">{personalInfo.name.split(' ')[0]}</span>
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-2xl font-heading font-medium text-muted-foreground">

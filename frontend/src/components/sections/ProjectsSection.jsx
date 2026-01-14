@@ -131,7 +131,7 @@ export const ProjectsSection = () => {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="gap-2"
           >
-            Let's Connect
+            Let&apos;s Connect
             <ChevronRight className="w-4 h-4" />
           </Button>
         </div>
