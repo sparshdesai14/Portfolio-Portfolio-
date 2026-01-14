@@ -14,7 +14,8 @@ const iconMap = {
   tool: Wrench,
   users: Users,
   shopping: ShoppingCart,
-  database: Database
+  database: Database,
+  trending: BarChart3
 };
 
 export const SkillsSection = () => {
