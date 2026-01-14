@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { personalInfo } from '@/data/portfolioData';
-import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Target, Briefcase, GraduationCap, Award, Sparkles } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Target, Briefcase, GraduationCap, Award, Sparkles, Building2 } from 'lucide-react';
 
 export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,7 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div 
-            className={`space-y-8 transition-all duration-1000 ${
+            className={`space-y-6 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -44,15 +44,21 @@ export const HeroSection = () => {
             </div>
 
             {/* Main Heading */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-foreground leading-tight">
                 Hi, I'm{' '}
                 <span className="text-gradient">{personalInfo.name.split(' ')[0]}</span>
               </h1>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-medium text-muted-foreground">
+              <h2 className="text-xl sm:text-2xl lg:text-2xl font-heading font-medium text-muted-foreground">
                 {personalInfo.title}
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              <p className="text-base sm:text-lg text-primary font-medium">
+                {personalInfo.subtitle}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {personalInfo.department}
+              </p>
+              <p className="text-base text-muted-foreground max-w-xl leading-relaxed pt-2">
                 {personalInfo.tagline}. Specializing in AI, Machine Learning, GenAI, Big Data, and Business Intelligence to drive data-driven decision making.
               </p>
             </div>
@@ -64,7 +70,7 @@ export const HeroSection = () => {
                 {personalInfo.location}
               </div>
               <div className="flex items-center gap-2">
-                <ExternalLink className="w-4 h-4 text-primary" />
+                <Building2 className="w-4 h-4 text-primary" />
                 {personalInfo.currentCompany}
               </div>
             </div>
@@ -86,7 +92,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4">
+            <div className="flex items-center gap-4 pt-2">
               <span className="text-sm text-muted-foreground">Connect with me:</span>
               <div className="flex gap-3">
                 <a 
