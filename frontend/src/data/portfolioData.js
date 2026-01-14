@@ -200,12 +200,28 @@ export const freelancing = {
 export const education = [
   {
     id: 1,
+    degree: "Diploma in Executive Leadership & Strategic Innovation Program",
+    field: "Executive Leadership & Strategic Innovation",
+    institution: "AMA (Ahmedabad Management Association)",
+    location: "Ahmedabad, India",
+    duration: "Aug 2025 - Feb 2026",
+    cgpa: null,
+    current: true,
+    highlights: [
+      "Currently pursuing in parallel with work",
+      "Focus on strategic leadership and business innovation",
+      "Executive management skills development"
+    ]
+  },
+  {
+    id: 2,
     degree: "Bachelor of Technology - B.Tech",
     field: "Computer Science",
     institution: "Kalinga Institute of Industrial Technology (KIIT)",
     location: "Bhubaneswar, India",
     duration: "2017 - 2021",
     cgpa: "8.76",
+    current: false,
     highlights: [
       "Java certification from KIIT",
       "Participated in Java coding competitions",
@@ -501,7 +517,7 @@ export const hobbies = [
     id: 5,
     name: "Sketching & Art",
     icon: "palette",
-    description: "Creative expression through pencil sketches and artwork (Certified - MAD IN SKETCH AND ART)"
+    description: "Creative expression through pencil sketches and artwork (Certified)"
   },
   {
     id: 6,
@@ -514,6 +530,12 @@ export const hobbies = [
     name: "Music",
     icon: "headphones",
     description: "Passionate about all genres of music"
+  },
+  {
+    id: 8,
+    name: "Teaching",
+    icon: "book",
+    description: "Taught Chemistry, Physics & Web Development during COVID as hobby"
   }
 ];
 
