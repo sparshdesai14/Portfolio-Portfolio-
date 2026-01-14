@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 // Section Components
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
+import { TimelineSection } from '@/components/sections/TimelineSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { DataScienceSection } from '@/components/sections/DataScienceSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
@@ -28,6 +29,7 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <TimelineSection />
         <ExperienceSection />
         <DataScienceSection />
         <SkillsSection />
