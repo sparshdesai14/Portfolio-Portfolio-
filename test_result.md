@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the portfolio website for Sparsh Desai at https://web-renewal-8.preview.emergentagent.com"
+user_problem_statement: "Test the portfolio website for Sparsh Desai at https://sparsh-analytics.preview.emergentagent.com"
 
 frontend:
   - task: "Navigation functionality"
