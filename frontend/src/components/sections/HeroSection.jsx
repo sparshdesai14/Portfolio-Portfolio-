@@ -7,7 +7,11 @@ export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    // Use requestAnimationFrame to avoid synchronous setState in effect
+    const timer = requestAnimationFrame(() => {
+      setIsVisible(true);
+    });
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   const scrollToAbout = () => {
