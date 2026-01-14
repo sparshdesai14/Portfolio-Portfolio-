@@ -61,26 +61,45 @@ export const experience = [
   {
     id: 1,
     title: "Senior Data Analyst & Business Intelligence Lead",
-    subtitle: "Enterprise Systems | Data Management Team",
+    subtitle: "Enterprise Systems | Data Management Team | CMAC",
     company: "Advait Energy Transitions Limited",
+    companyWebsites: [
+      { name: "Advait Group", url: "https://www.advaitgroup.co.in/" },
+      { name: "Advait Green Energy", url: "https://advaitgreenergy.com/" }
+    ],
     location: "Ahmedabad, Gujarat, India",
     type: "Full-time",
     mode: "On-site",
     duration: "Sep 2025 - Present",
     period: "5 months",
     current: true,
-    description: `Lead the organization's enterprise analytics and reporting ecosystem. Design and manage Power BI platforms, DAX-driven data models, SharePoint data architecture, and automated pipelines delivering real-time visibility across multiple business functions. Also managing IT Infrastructure, vendor coordination, and parallel projects in GenAI and Virtual AI.`,
+    description: `As a Senior Data Analyst & Business Intelligence Lead – Enterprise Systems at Advait Energy Transitions Limited, I am part of the Data Management Team and the Corporate Monitoring & Control function, where I design and deliver enterprise-wide business intelligence and data platforms that support leadership, Finance, Projects, and HR in making accurate, data-driven decisions.
+
+I architect and manage the organization's Power BI ecosystem, developing AOP, Cash Flow, LC & BG, HTLS, DISCOM, Liveline, LOA, Tender, and project performance dashboards that serve as the single source of truth for management. This includes building DAX-driven data models, SharePoint-based data architecture, automated refresh pipelines, and role-based access controls to ensure data accuracy, security, and reliability.
+
+Alongside analytics, I support and administer KEKA HRMS and PMS as IT and PMS Admin, enabling KRA/KPI frameworks, performance workflows, and secure employee data management, while aligning HR data with enterprise reporting systems.
+
+I also act as a Data Analyst and Visualization Lead, transforming complex datasets into clear, executive-ready dashboards and reports that enable better decisions across departments.
+
+Beyond analytics, I support website data and reporting requirements, coordinate with vendors on digital platforms, and provide enterprise IT support including Microsoft 365 administration, access management, asset systems, and user enablement.
+
+I also develop Power Apps and Power Automate workflows to digitize reporting, approvals, and data movement, improving efficiency. My work spans data extraction, modeling, visualization, automation, governance, and system support, ensuring leadership has real-time, trusted insights.
+
+Through business intelligence, enterprise systems, and digital transformation, I enable Advait to operate as a data-driven organization, supporting corporate monitoring, financial control, project visibility, and strategic planning at scale.`,
     highlights: [
-      "Architect and manage enterprise-wide Power BI ecosystem",
-      "Build DAX-driven data models and SharePoint data architecture",
-      "Support and administer KEKA HRMS and PMS as IT Admin",
-      "Develop Power Apps and Power Automate workflows",
-      "Create dashboards for AOP, Cash Flow, LC & BG, HTLS, DISCOM tracking",
-      "Manage IT Infrastructure and vendor relationships",
-      "Working on GenAI and Virtual AI implementations",
-      "Website management and digital platform administration"
+      "Architect and manage enterprise-wide Power BI ecosystem serving as single source of truth",
+      "Develop AOP, Cash Flow, LC & BG, HTLS, DISCOM, Liveline, LOA, Tender dashboards",
+      "Build DAX-driven data models and SharePoint-based data architecture",
+      "Implement automated refresh pipelines and role-based access controls",
+      "Support and administer KEKA HRMS and PMS as IT and PMS Admin",
+      "Enable KRA/KPI frameworks and performance management workflows",
+      "Transform complex datasets into executive-ready dashboards and reports",
+      "Coordinate with vendors on digital platforms and website data requirements",
+      "Provide Microsoft 365 administration, access management, and IT support",
+      "Develop Power Apps and Power Automate workflows for automation",
+      "Support corporate monitoring, financial control, and strategic planning"
     ],
-    skills: ["Power BI", "DAX", "SharePoint", "Power Apps", "Power Automate", "Data Modeling", "KEKA HRMS", "IT Infrastructure", "GenAI", "Virtual AI", "GCP"]
+    skills: ["Power BI", "DAX", "SharePoint", "Power Apps", "Power Automate", "Data Modeling", "KEKA HRMS", "PMS Admin", "Microsoft 365", "IT Infrastructure", "Data Governance", "Enterprise BI"]
   },
   {
     id: 2,
