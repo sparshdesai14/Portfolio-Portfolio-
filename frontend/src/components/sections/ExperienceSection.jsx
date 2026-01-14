@@ -261,7 +261,7 @@ export const ExperienceSection = () => {
           {activeTab === 'education' && (
             <div className="space-y-6">
               {education.map((edu) => (
-                <Card key={edu.id} className="bg-card border-border hover:border-primary/30 transition-all duration-300">
+                <Card key={edu.id} className={`bg-card border-border hover:border-primary/30 transition-all duration-300 ${edu.current ? 'border-primary/50' : ''}`}>
                   <CardContent className="p-6 lg:p-8">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       {/* Icon */}
@@ -271,6 +271,13 @@ export const ExperienceSection = () => {
                       
                       {/* Content */}
                       <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          {edu.current && (
+                            <Badge className="bg-primary/20 text-primary border-primary/30">
+                              Currently Pursuing
+                            </Badge>
+                          )}
+                        </div>
                         <h3 className="text-xl font-heading font-bold text-foreground mb-1">
                           {edu.degree}
                         </h3>
@@ -301,12 +308,14 @@ export const ExperienceSection = () => {
                       </div>
                       
                       {/* CGPA Badge */}
-                      <div className="text-center md:text-right">
-                        <div className="inline-block px-6 py-3 rounded-xl bg-primary/10 border border-primary/30">
-                          <div className="text-2xl font-heading font-bold text-gradient">{edu.cgpa}</div>
-                          <div className="text-xs text-muted-foreground">CGPA</div>
+                      {edu.cgpa && (
+                        <div className="text-center md:text-right">
+                          <div className="inline-block px-6 py-3 rounded-xl bg-primary/10 border border-primary/30">
+                            <div className="text-2xl font-heading font-bold text-gradient">{edu.cgpa}</div>
+                            <div className="text-xs text-muted-foreground">CGPA</div>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
