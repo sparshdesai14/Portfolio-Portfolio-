@@ -35,11 +35,11 @@ Create a personal portfolio/CV website for "Sparsh Desai", a Senior Data Analyst
 ### Timeline Data Updates (Jan 14, 2026)
 - ✅ Elsner Internship moved to 2021
 - ✅ TCS & Accenture offers REMOVED
-- ✅ Unmessenger Internship updated to 2024
+- ✅ Unmessenger Internship updated to Dec 2023 - Jun 2024 (shows as 2023-24)
 - ✅ DataIsGood Certifications added (2024)
 - ✅ NLP Sentiment Analysis (Galwan Crisis) project added (2019)
-- ✅ COVID Analysis Project added (2020)
-- ✅ COVID Analysis Dashboard (Final Year Project) added (2020)
+- ✅ COVID Analysis Dashboard (Final Year Project) - SINGLE project (2020)
+- ✅ All 15 linting errors fixed
 
 ---
 
