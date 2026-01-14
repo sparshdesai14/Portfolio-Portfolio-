@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { personalInfo } from '@/data/portfolioData';
 import { 
   Mail, Phone, MapPin, Linkedin, Send, Download,
-  CheckCircle2, ExternalLink
+  CheckCircle2, ExternalLink, MessageCircle
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -57,10 +57,17 @@ export const ContactSection = () => {
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Call / Message',
       value: personalInfo.phone,
       href: `tel:${personalInfo.phone}`,
       action: 'Call Now'
+    },
+    {
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      value: personalInfo.phone,
+      href: `https://wa.me/919409460879`,
+      action: 'Chat on WhatsApp'
     },
     {
       icon: MapPin,
@@ -124,8 +131,8 @@ export const ContactSection = () => {
                           {info.href ? (
                             <a 
                               href={info.href}
-                              target={info.icon === Linkedin ? '_blank' : undefined}
-                              rel={info.icon === Linkedin ? 'noopener noreferrer' : undefined}
+                              target={info.icon === Linkedin || info.icon === MessageCircle ? '_blank' : undefined}
+                              rel={info.icon === Linkedin || info.icon === MessageCircle ? 'noopener noreferrer' : undefined}
                               className="text-foreground hover:text-primary transition-colors truncate block"
                             >
                               {info.value}
@@ -142,6 +149,22 @@ export const ContactSection = () => {
                   </Card>
                 );
               })}
+            </div>
+
+            {/* Quick Contact Buttons */}
+            <div className="grid grid-cols-2 gap-3">
+              <a href={`https://wa.me/919409460879`} target="_blank" rel="noopener noreferrer" className="block">
+                <Button variant="outline" className="w-full gap-2 border-green-500/30 text-green-500 hover:bg-green-500/10">
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </Button>
+              </a>
+              <a href={`tel:${personalInfo.phone}`} className="block">
+                <Button variant="outline" className="w-full gap-2">
+                  <Phone className="w-4 h-4" />
+                  Call Now
+                </Button>
+              </a>
             </div>
 
             {/* Download CV Card */}
