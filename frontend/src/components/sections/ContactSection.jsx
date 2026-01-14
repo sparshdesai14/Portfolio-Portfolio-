@@ -10,6 +10,10 @@ import {
   CheckCircle2, ExternalLink, MessageCircle
 } from 'lucide-react';
 import { toast } from 'sonner';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -30,21 +34,30 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Submit to backend API
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.data.success) {
+        setIsSubmitted(true);
+        toast.success('Message sent successfully!', {
+          description: "I'll get back to you as soon as possible."
+        });
 
-    // Show success
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast.success('Message sent successfully!', {
-      description: "I'll get back to you as soon as possible."
-    });
-
-    // Reset form after delay
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitted(false);
-    }, 3000);
+        // Reset form after delay
+        setTimeout(() => {
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setIsSubmitted(false);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      toast.error('Failed to send message', {
+        description: 'Please try again or contact me directly via email.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -220,6 +233,7 @@ export const ContactSection = () => {
                           onChange={handleChange}
                           placeholder="John Doe"
                           required
+                          minLength={2}
                           className="bg-background border-border focus:border-primary"
                         />
                       </div>
@@ -251,6 +265,7 @@ export const ContactSection = () => {
                         onChange={handleChange}
                         placeholder="Project Discussion / Opportunity / Other"
                         required
+                        minLength={3}
                         className="bg-background border-border focus:border-primary"
                       />
                     </div>
@@ -267,6 +282,7 @@ export const ContactSection = () => {
                         placeholder="Tell me about your project or how I can help..."
                         rows={5}
                         required
+                        minLength={10}
                         className="bg-background border-border focus:border-primary resize-none"
                       />
                     </div>
