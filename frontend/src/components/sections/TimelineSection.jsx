@@ -25,15 +25,8 @@ const timelineData = [
   },
   {
     year: "2020",
-    title: "COVID Analysis Project",
-    description: "Data Analysis & Visualization",
-    icon: Award,
-    type: "project"
-  },
-  {
-    year: "2020",
-    title: "COVID Dashboard",
-    description: "Final Year Project - Analysis Dashboard",
+    title: "COVID Analysis Dashboard",
+    description: "Final Year Project - Data Analysis",
     icon: Award,
     type: "project"
   },
@@ -73,7 +66,7 @@ const timelineData = [
     type: "work"
   },
   {
-    year: "2024",
+    year: "2023-24",
     title: "Unmessenger Internship",
     description: "Data Science & ML on GCP",
     icon: Rocket,

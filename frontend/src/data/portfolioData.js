@@ -135,8 +135,8 @@ export const internships = [
     location: "Delhi, India",
     type: "Internship",
     mode: "Remote",
-    duration: "Jan 2024 - Jun 2024",
-    period: "6 months",
+    duration: "Dec 2023 - Jun 2024",
+    period: "7 months",
     description: `Led multiple Data Science projects encompassing Data Analysis, Extraction, Cleaning, and Visualization. Successfully developed and deployed Machine Learning models with optimized performance on Google Cloud Platform.`,
     highlights: [
       "Led end-to-end Data Science projects with high data quality standards",
@@ -326,22 +326,14 @@ export const projects = [
   },
   {
     id: 4,
-    title: "COVID Analysis Project",
-    description: "Comprehensive data analysis and visualization project on COVID-19 pandemic data, providing insights on spread patterns, recovery rates, and regional impacts.",
-    tech: ["Python", "Pandas", "Data Visualization", "Jupyter", "Matplotlib"],
+    title: "COVID Analysis Dashboard",
+    description: "Final Year Project - Built an interactive COVID-19 analysis dashboard providing comprehensive data analysis, visualization, trend analysis, and predictive insights for pandemic tracking.",
+    tech: ["Python", "Power BI", "Data Visualization", "Machine Learning", "SQL", "Pandas"],
     category: "Data Science",
-    highlights: ["Pandemic data analysis", "Statistical insights", "Visual dashboards"]
+    highlights: ["Final Year Project", "Real-time dashboard", "Predictive analytics", "Interactive visualizations", "Pandemic data analysis"]
   },
   {
     id: 5,
-    title: "COVID Analysis Dashboard",
-    description: "Final Year Project - Built an interactive COVID-19 analysis dashboard providing real-time data visualization, trend analysis, and predictive insights for pandemic tracking.",
-    tech: ["Python", "Power BI", "Data Visualization", "Machine Learning", "SQL"],
-    category: "Data Science",
-    highlights: ["Final Year Project", "Real-time dashboard", "Predictive analytics", "Interactive visualizations"]
-  },
-  {
-    id: 6,
     title: "FinTech Invoice Prediction System",
     description: "Developed ML-based system to predict invoice payment status (full/partial) for HighRadius.",
     tech: ["Python", "React.js", "Redux", "SQL Server", "Machine Learning"],
