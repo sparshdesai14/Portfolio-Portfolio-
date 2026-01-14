@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { personalInfo } from '@/data/portfolioData';
-import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Target } from 'lucide-react';
 
 export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +52,7 @@ export const HeroSection = () => {
                 {personalInfo.title}
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                {personalInfo.tagline}. Specializing in AI, Machine Learning, and Business Intelligence to drive data-driven decision making.
+                {personalInfo.tagline}. Specializing in AI, Machine Learning, GenAI, and Business Intelligence to drive data-driven decision making.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
+          {/* Right Content - Profile Image (Square) with Experience */}
           <div 
             className={`relative flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -120,22 +120,35 @@ export const HeroSection = () => {
           >
             <div className="relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 scale-110" />
+              <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-3xl opacity-30 scale-110" />
               
-              {/* Image Container */}
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
+              {/* Image Container - SQUARE */}
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-glow">
                 <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
                 />
+                
+                {/* Overlay with info */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-4">
+                  <p className="text-primary font-heading font-bold text-lg">
+                    4+ Years Experience
+                  </p>
+                  <p className="text-foreground/80 text-sm mt-1">
+                    Data Science | BI | AI/ML | Web Dev
+                  </p>
+                </div>
               </div>
               
-              {/* Floating Badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-3 bg-card border border-border rounded-full shadow-lg">
-                <p className="text-sm font-medium text-foreground whitespace-nowrap">
-                  <span className="text-primary">4+</span> Years Experience
-                </p>
+              {/* Goal Badge */}
+              <div className="absolute -bottom-4 -right-4 px-4 py-3 bg-card border border-primary/30 rounded-xl shadow-lg max-w-xs">
+                <div className="flex items-start gap-2">
+                  <Target className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    <span className="text-primary font-semibold">Goal:</span> Driving digital transformation & technology-led growth
+                  </p>
+                </div>
               </div>
             </div>
           </div>

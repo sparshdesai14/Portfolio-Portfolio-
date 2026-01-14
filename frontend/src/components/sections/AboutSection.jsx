@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { aboutMe, personalInfo } from '@/data/portfolioData';
-import { CheckCircle2, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react';
+import { aboutMe, personalInfo, competitiveExams } from '@/data/portfolioData';
+import { CheckCircle2, Briefcase, GraduationCap, Award, Code2, Trophy, Star } from 'lucide-react';
 
 export const AboutSection = () => {
   const stats = [
@@ -31,16 +31,33 @@ export const AboutSection = () => {
           </p>
         </div>
 
+        {/* Full Bio Section */}
+        <Card className="bg-card border-border mb-12">
+          <CardContent className="p-6 lg:p-10">
+            <h3 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
+              <Star className="w-6 h-6 text-primary" />
+              My Journey & Expertise
+            </h3>
+            <div className="prose prose-invert max-w-none">
+              {personalInfo.bio.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-muted-foreground leading-relaxed mb-4 text-base">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-8">
-            {/* Bio Card */}
+            {/* Additional Summary */}
             <Card className="bg-card border-border hover:border-primary/30 transition-colors duration-300">
               <CardContent className="p-6 lg:p-8">
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {personalInfo.bio}
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <h4 className="text-xl font-heading font-semibold text-foreground mb-4">
+                  Current Focus & Parallel Work
+                </h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {aboutMe.summary}
                 </p>
               </CardContent>
@@ -63,6 +80,28 @@ export const AboutSection = () => {
                 ))}
               </div>
             </div>
+
+            {/* Competitive Exams & Training */}
+            <Card className="bg-gradient-to-br from-primary/10 to-transparent border-primary/20">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Trophy className="w-6 h-6 text-primary" />
+                  <h4 className="text-lg font-heading font-semibold text-foreground">
+                    Competitive Excellence
+                  </h4>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {competitiveExams.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {competitiveExams.exams.map((exam, index) => (
+                    <span key={index} className="skill-badge text-xs">
+                      {exam}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Right Content - Stats */}
@@ -92,6 +131,23 @@ export const AboutSection = () => {
               })}
             </div>
 
+            {/* Additional Info */}
+            <Card className="bg-card border-border">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-heading font-semibold text-foreground mb-4">
+                  Additional Achievements
+                </h4>
+                <div className="space-y-3">
+                  {aboutMe.additionalInfo.map((info, index) => (
+                    <div key={index} className="flex items-start gap-2 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{info}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Tech Stack Preview */}
             <Card className="bg-card border-border">
               <CardContent className="p-6 lg:p-8">
@@ -102,7 +158,8 @@ export const AboutSection = () => {
                   {[
                     'Python', 'Power BI', 'Machine Learning', 'React.js',
                     'TensorFlow', 'GCP', 'Azure', 'SQL', 'DAX',
-                    'SharePoint', 'Deep Learning', 'NLP'
+                    'SharePoint', 'Deep Learning', 'NLP', 'GenAI',
+                    'Shopify', 'Magento', 'SEO', 'Big Data', 'Hadoop'
                   ].map((tech, index) => (
                     <span 
                       key={index}

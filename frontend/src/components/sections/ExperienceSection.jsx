@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { experience, education, certifications } from '@/data/portfolioData';
+import { experience, internships, education, certifications, freelancing } from '@/data/portfolioData';
 import { 
   Briefcase, GraduationCap, Award, MapPin, Calendar, 
-  Building2, ChevronRight, ExternalLink 
+  Building2, ChevronRight, ExternalLink, Rocket 
 } from 'lucide-react';
 
 export const ExperienceSection = () => {
@@ -12,6 +12,8 @@ export const ExperienceSection = () => {
 
   const tabs = [
     { id: 'experience', label: 'Work Experience', icon: Briefcase },
+    { id: 'internships', label: 'Internships', icon: Rocket },
+    { id: 'freelancing', label: 'Freelancing', icon: ExternalLink },
     { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'certifications', label: 'Certifications', icon: Award }
   ];
@@ -33,7 +35,7 @@ export const ExperienceSection = () => {
             <span className="text-gradient">Education</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-            A timeline of my professional growth and academic achievements
+            A timeline of my professional growth, internships, and academic achievements
           </p>
         </div>
 
@@ -45,14 +47,14 @@ export const ExperienceSection = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm ${
                   activeTab === tab.id
                     ? 'bg-primary text-primary-foreground shadow-glow-sm'
                     : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30'
                 }`}
               >
                 <Icon className="w-4 h-4" />
-                {tab.label}
+                <span className="hidden sm:inline">{tab.label}</span>
               </button>
             );
           })}
@@ -141,13 +143,127 @@ export const ExperienceSection = () => {
             </div>
           )}
 
+          {/* Internships Tab */}
+          {activeTab === 'internships' && (
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block" />
+              
+              <div className="space-y-8">
+                {internships.map((intern, index) => (
+                  <div key={intern.id} className="relative pl-0 md:pl-16">
+                    {/* Timeline Dot */}
+                    <div className="absolute left-4 top-8 w-4 h-4 rounded-full bg-primary shadow-glow hidden md:block" />
+                    
+                    <Card className="bg-card border-border hover:border-primary/30 transition-all duration-300">
+                      <CardContent className="p-6 lg:p-8">
+                        {/* Header */}
+                        <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                          <div>
+                            <Badge className="bg-primary/20 text-primary border-primary/30 mb-2">
+                              Internship
+                            </Badge>
+                            <h3 className="text-xl lg:text-2xl font-heading font-bold text-foreground">
+                              {intern.title}
+                            </h3>
+                          </div>
+                        </div>
+
+                        {/* Company & Location */}
+                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
+                          <div className="flex items-center gap-2">
+                            <Building2 className="w-4 h-4 text-primary" />
+                            {intern.company}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-primary" />
+                            {intern.location}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-primary" />
+                            {intern.duration} · {intern.period}
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-muted-foreground mb-6 leading-relaxed">
+                          {intern.description}
+                        </p>
+
+                        {/* Highlights */}
+                        <div className="space-y-2 mb-6">
+                          {intern.highlights.map((highlight, idx) => (
+                            <div key={idx} className="flex items-start gap-2">
+                              <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                              <span className="text-sm text-muted-foreground">{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Skills */}
+                        <div className="flex flex-wrap gap-2">
+                          {intern.skills.map((skill, idx) => (
+                            <span key={idx} className="skill-badge text-xs">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Freelancing Tab */}
+          {activeTab === 'freelancing' && (
+            <Card className="bg-card border-border">
+              <CardContent className="p-6 lg:p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <ExternalLink className="w-7 h-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-heading font-bold text-foreground">
+                      {freelancing.title}
+                    </h3>
+                    <p className="text-primary">Multiple Successful Projects</p>
+                  </div>
+                </div>
+                
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {freelancing.description}
+                </p>
+                
+                <h4 className="font-semibold text-foreground mb-4">Projects Delivered:</h4>
+                <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                  {freelancing.projects.map((project, idx) => (
+                    <div key={idx} className="flex items-center gap-2 p-3 rounded-lg bg-muted/50">
+                      <ChevronRight className="w-4 h-4 text-primary" />
+                      <span className="text-sm text-muted-foreground">{project}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex flex-wrap gap-2">
+                  {freelancing.skills.map((skill, idx) => (
+                    <span key={idx} className="skill-badge text-xs">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Education Tab */}
           {activeTab === 'education' && (
             <div className="space-y-6">
               {education.map((edu) => (
                 <Card key={edu.id} className="bg-card border-border hover:border-primary/30 transition-all duration-300">
                   <CardContent className="p-6 lg:p-8">
-                    <div className="flex flex-col md:flex-row md:items-center gap-6">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
                       {/* Icon */}
                       <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <GraduationCap className="w-8 h-8 text-primary" />
@@ -160,7 +276,7 @@ export const ExperienceSection = () => {
                         </h3>
                         <p className="text-primary font-medium mb-2">{edu.field}</p>
                         <p className="text-muted-foreground mb-3">{edu.institution}</p>
-                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
                           <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4 text-primary" />
                             {edu.location}
@@ -170,6 +286,18 @@ export const ExperienceSection = () => {
                             {edu.duration}
                           </div>
                         </div>
+                        
+                        {/* Highlights */}
+                        {edu.highlights && (
+                          <div className="space-y-2">
+                            {edu.highlights.map((highlight, idx) => (
+                              <div key={idx} className="flex items-start gap-2">
+                                <ChevronRight className="w-4 h-4 text-primary mt-0.5" />
+                                <span className="text-sm text-muted-foreground">{highlight}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                       
                       {/* CGPA Badge */}

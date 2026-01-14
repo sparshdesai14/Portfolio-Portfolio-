@@ -3,13 +3,15 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data/portfolioData';
-import { ExternalLink, Github, ChevronRight, Layers, Database, Cloud, DollarSign } from 'lucide-react';
+import { ExternalLink, Github, ChevronRight, Layers, Database, Cloud, DollarSign, Code2, ShoppingCart } from 'lucide-react';
 
 const categoryIcons = {
   'Business Intelligence': Layers,
   'Data Science': Database,
   'Cloud & Analytics': Cloud,
-  'FinTech': DollarSign
+  'FinTech': DollarSign,
+  'Web Development': Code2,
+  'E-commerce': ShoppingCart
 };
 
 export const ProjectsSection = () => {
@@ -38,7 +40,7 @@ export const ProjectsSection = () => {
             <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-            A selection of projects showcasing my expertise in data science, business intelligence, and development
+            A selection of projects showcasing my expertise in data science, business intelligence, web development, and e-commerce
           </p>
         </div>
 
@@ -60,52 +62,52 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => {
             const CategoryIcon = categoryIcons[project.category] || Layers;
             return (
               <Card 
                 key={project.id}
-                className="bg-card border-border hover:border-primary/30 transition-all duration-300 group overflow-hidden"
+                className="bg-card border-border hover:border-primary/30 transition-all duration-300 group overflow-hidden flex flex-col"
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 flex flex-col flex-1">
                   {/* Card Header with Gradient */}
                   <div className="p-6 bg-gradient-to-br from-primary/10 via-transparent to-transparent border-b border-border">
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <CategoryIcon className="w-6 h-6 text-primary" />
                       </div>
-                      <Badge variant="outline" className="bg-card/50 border-primary/30 text-primary">
+                      <Badge variant="outline" className="bg-card/50 border-primary/30 text-primary text-xs">
                         {project.category}
                       </Badge>
                     </div>
-                    <h3 className="text-xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-heading font-bold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                   </div>
                   
                   {/* Card Body */}
-                  <div className="p-6">
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <div className="p-6 flex flex-col flex-1">
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                       {project.description}
                     </p>
                     
                     {/* Highlights */}
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-4 flex-1">
                       {project.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm">
-                          <ChevronRight className="w-4 h-4 text-primary" />
+                          <ChevronRight className="w-4 h-4 text-primary flex-shrink-0" />
                           <span className="text-muted-foreground">{highlight}</span>
                         </div>
                       ))}
                     </div>
                     
                     {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tech.map((tech, idx) => (
                         <span 
                           key={idx}
-                          className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground"
+                          className="px-2 py-1 text-xs rounded-md bg-muted text-muted-foreground"
                         >
                           {tech}
                         </span>

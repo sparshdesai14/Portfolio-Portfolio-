@@ -13,7 +13,7 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = navLinks.map(link => link.href.replace('#', ''));
+      const sections = [...navLinks.map(link => link.href.replace('#', '')), 'hobbies'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element) {
@@ -69,7 +69,7 @@ export const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === link.href.replace('#', '')
                     ? 'text-primary bg-primary/10'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -78,6 +78,17 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href="#hobbies"
+              onClick={(e) => { e.preventDefault(); handleNavClick('#hobbies'); }}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                activeSection === 'hobbies'
+                  ? 'text-primary bg-primary/10'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+              }`}
+            >
+              Hobbies
+            </a>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -112,7 +123,7 @@ export const Navbar = () => {
         {/* Mobile Menu */}
         <div 
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="py-4 space-y-2 border-t border-border">
@@ -130,6 +141,17 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href="#hobbies"
+              onClick={(e) => { e.preventDefault(); handleNavClick('#hobbies'); }}
+              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                activeSection === 'hobbies'
+                  ? 'text-primary bg-primary/10'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+              }`}
+            >
+              Hobbies
+            </a>
             <div className="pt-4 px-4 flex gap-3">
               <a href={personalInfo.cvUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
                 <Button variant="premium" className="w-full gap-2">
