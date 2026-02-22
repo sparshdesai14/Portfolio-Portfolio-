@@ -60,7 +60,7 @@ I'm currently pursuing a Diploma in Executive Leadership & Strategic Innovation 
 export const experience = [
   {
     id: 1,
-    title: "Senior Data Analyst & Business Intelligence Lead",
+    title: "Lead – Data, AI & Analytics (BI)",
     subtitle: "Enterprise Systems | Data Management Team | CMAC",
     company: "Advait Energy Transitions Limited",
     companyWebsites: [
@@ -73,7 +73,7 @@ export const experience = [
     duration: "Sep 2025 - Present",
     period: "5 months",
     current: true,
-    description: `As a Senior Data Analyst & Business Intelligence Lead – Enterprise Systems at Advait Energy Transitions Limited, I am part of the Data Management Team and the Corporate Monitoring & Control function, where I design and deliver enterprise-wide business intelligence and data platforms that support leadership, Finance, Projects, and HR in making accurate, data-driven decisions.
+    description: `As a Lead – Data, AI & Analytics (BI) at Advait Energy Transitions Limited, I am part of the Data Management Team and the Corporate Monitoring & Control function, where I design and deliver enterprise-wide business intelligence and data platforms that support leadership, Finance, Projects, and HR in making accurate, data-driven decisions.
 
 I architect and manage the organization's Power BI ecosystem, developing AOP, Cash Flow, LC & BG, HTLS, DISCOM, Liveline, LOA, Tender, and project performance dashboards that serve as the single source of truth for management. This includes building DAX-driven data models, SharePoint-based data architecture, automated refresh pipelines, and role-based access controls to ensure data accuracy, security, and reliability.
 
