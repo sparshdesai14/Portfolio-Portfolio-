@@ -25,7 +25,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Senior Data Analyst & Business Intelligence Lead specializing in transforming complex data into strategic business insights.
+              Lead – Data, AI & Analytics (BI) specializing in transforming complex data into strategic business insights.
             </p>
             <div className="flex gap-3">
               <a 

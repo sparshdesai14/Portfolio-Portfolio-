@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Sparsh Desai",
   pronouns: "He/Him",
-  title: "Senior Data Analyst & Business Intelligence Lead",
+  title: "Lead – Data, AI & Analytics (BI)",
   subtitle: "Enterprise Systems | Data Management Team @ Advait",
   department: "CMAC Team | Corporate Monitoring and Control Department",
   currentCompany: "Advait Energy Transitions Limited",
@@ -16,7 +16,7 @@ export const personalInfo = {
   cvUrl: "https://customer-assets.emergentagent.com/job_953a63e0-d427-41e0-bc17-fcb7d29ed0d9/artifacts/xx8cf5wn_Sparsh_Desai_Machine_Learning_CV.pdf",
   shayariWebsite: "https://multi-language-shaya-y71r.bolt.host/",
   goal: "To drive digital transformation, operational excellence, and technology-led growth across modern enterprises through data-driven decision making and innovative AI solutions.",
-  bio: `I am a Senior Data Analyst & Business Intelligence Lead – Enterprise Systems with a strong foundation in Computer Science and hands-on experience across AI, Machine Learning, Deep Learning, Data Science, NLP, Business Intelligence, and Enterprise Systems. I specialize in converting complex, high-volume data into clear, reliable insights that enable leadership teams to make confident, data-driven decisions.
+  bio: `I am a Lead – Data, AI & Analytics (BI) with a strong foundation in Computer Science and hands-on experience across AI, Machine Learning, Deep Learning, Data Science, NLP, Business Intelligence, and Enterprise Systems. I specialize in converting complex, high-volume data into clear, reliable insights that enable leadership teams to make confident, data-driven decisions.
 
 At Advait Energy Transitions Limited, a leader in power transmission and green energy, I lead the organization's enterprise analytics and reporting ecosystem. I design and manage Power BI platforms, DAX-driven data models, SharePoint data architecture, and automated pipelines that deliver real-time visibility across AOP, Cash Flow, LC & BG, HTLS, DISCOM, Liveline, LOA, and project tracking, creating a single source of truth for Finance, Projects, and HR.
 

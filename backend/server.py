@@ -365,7 +365,7 @@ async def get_portfolio_info():
     """
     return {
         "name": "Sparsh Desai",
-        "title": "Senior Data Analyst & Business Intelligence Lead",
+        "title": "Lead – Data, AI & Analytics (BI)",
         "subtitle": "Enterprise Systems | Data Management Team @ Advait",
         "department": "CMAC Team | Corporate Monitoring and Control Department",
         "company": "Advait Energy Transitions Limited",
