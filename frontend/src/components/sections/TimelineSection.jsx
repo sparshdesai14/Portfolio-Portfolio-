@@ -82,7 +82,7 @@ const timelineData = [
   {
     year: "2025",
     title: "Joined Advait",
-    description: "Sr. Data Analyst & BI Lead - CMAC",
+    description: "Lead – Data, AI & Analytics (BI)",
     icon: Briefcase,
     type: "work"
   },
